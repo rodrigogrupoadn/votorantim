@@ -1,6 +1,6 @@
 <?php include('application/views/template/header.php'); ?>
 
-        <!--main content start-->
+        <!--main content start  -->
       <section id="main-content">
           <section class="wrapper site-min-height">
               <section class="box_container showback">
@@ -12,7 +12,7 @@
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
                
-				 <button class="btn btn-primary  btn-xs" data-toggle="modal" data-target="#myModalCriar">Adicionar novo</button>
+				 <button class="btn btn-primary  btn-xs" data-toggle="modal" data-target="#myModalCriar"> Adicionar novo</button>
             </div>
             <div class="col-md-4 text-center">
                 <div style="margin-top: 8px" id="message">

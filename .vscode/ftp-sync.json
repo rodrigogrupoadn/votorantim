@@ -1,0 +1,19 @@
+{
+"remotePath": "./",
+"host": "dev2.wwwssr16.supercp.com",
+"username": "votorantim@dev2.com.br",
+"password": "@dn@2016",
+"port": 21,
+"secure": false,
+"protocol": "ftp",
+"uploadOnSave": true,
+"passive": false,
+"debug": false,
+"privateKeyPath": null,
+"passphrase": null,
+"ignore": [
+"\\.vscode",
+"\\.git",
+"\\.DS_Store"
+]
+}
