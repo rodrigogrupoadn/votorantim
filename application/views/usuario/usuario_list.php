@@ -4,7 +4,7 @@
       <section id="main-content">
           <section class="wrapper site-min-height">
               <section class="box_container showback">
-          	<h3><i class="fa fa-users" aria-hidden="true"></i> Usuários cadastrados</h3>
+          	<h3><i class="fa fa-users" aria-hidden="true"></i> Usuários cadastrados new</h3>
           	<div class="row mt">
           		<div class="col-lg-12">
 
@@ -52,11 +52,10 @@
 		<th>Telefone1</th>
 		<th>Ddd2</th>
 		<th>Telefone2</th>
-		<th>Chat Ativo</th>
-		<th>Ativo</th>
-		<th>Empresa Id</th>
-		<th>Perfil Id</th>
-		<th>Action</th>
+	
+		<th>Empresa</th>
+
+		<th>Ações</th>
             </tr><?php
             foreach ($usuario_data as $usuario)
             {
@@ -72,10 +71,9 @@
 			<td><?php echo $usuario->telefone1 ?></td>
 			<td><?php echo $usuario->ddd2 ?></td>
 			<td><?php echo $usuario->telefone2 ?></td>
-			<td><?php echo $usuario->chat_ativo ?></td>
-			<td><?php echo $usuario->ativo ?></td>
+	
 			<td><?php echo $usuario->empresa_id ?></td>
-			<td><?php echo $usuario->perfil_id ?></td>
+		
 			<td>
  
 
