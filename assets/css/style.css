@@ -92,7 +92,7 @@ a, a:hover, a:focus {
 
 .btn-theme {
   color: #fff;
-  background-color: #68dff0;
+  background-image: linear-gradient(to right, #00bdd6, #00bdd6, #00e5fe);
   border-color: #48bcb4;
 }
 .btn-theme:hover,
@@ -101,7 +101,7 @@ a, a:hover, a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #48bcb4;
+  background-image: linear-gradient(to right, #00bdd6, #00bdd6, #00e5fe);
   border-color: #48bcb4;
 }
 
@@ -1932,7 +1932,7 @@ label {
 	margin: 0;
 	padding: 25px 20px;
 	text-align: center;
-	background: #68dff0;
+	background-image: linear-gradient(to right, #00bdd6, #00bdd6, #00e5fe);
 	border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
 	color: #fff;
@@ -2265,4 +2265,20 @@ label {
     padding-right: 10px;
     width: 33%;
     display: inline-block;
+}
+
+
+.error_login{
+    color: #F01;
+    display: block;
+    background-color: rgba(255, 232, 232, 0.76);
+    padding: 10px;
+    border-radius: 4px;
+    width: 331px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: -50px;
+    text-align: center;
+    font-weight: 800;
+    border: 1px dashed;
 }

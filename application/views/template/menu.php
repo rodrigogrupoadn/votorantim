@@ -7,18 +7,99 @@
               	  <p class="centered"><a href="profile.html"><img src="<?php echo base_url();?>/assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Marcel Newman</h5>
               	  	
-                  <li class="mt">
-                      <a href="index.html">
+                  <li class="">
+                      <a href="welcome">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
+                      </li>
+                         <li class="">
                        <a href="usuario">
                           <i class="fa fa-users"></i>
                           <span>Usuários</span>
                       </a>
+    </li>
+                         <li class="">
+                         <a href="empresa">
+                         <i class="fa fa-hospital-o" aria-hidden="true"></i>
+                          <span>Empresas</span>
+                      </a>
+    </li>
+                         <li class="">
+                      <a href="post">
+                         <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                          <span>Posts</span>
+                      </a>
+                      </li>
+                       <li class="">
+                       <a href="post_publicitario">
+              <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                          <span>Posts publicitários</span>
+                      </a>
+                      </li>
+                       <li class="">
+                          <a href="perfil">
+                   <i class="fa fa-cogs"></i>
+                          <span>Perfil</span>
+                      </a>
+                      </li>
+                       <li class="">
+                                     <a href="obra">
+              <i class="fa fa-university" aria-hidden="true"></i>
+                          <span>Obras</span>
+                      </a>
+                      </li>
+                       <li class="">
+                                                     <a href="fase_obra">
+              <i class="fa fa-university" aria-hidden="true"></i>
+                          <span>Fase de Obras</span>
+                      </a>
+                      </li>
+                     <!--  <li class="">
+               <a href="chat">
+              <i class="fa fa-weixin" aria-hidden="true"></i>
+                          <span>Chat</span> </a>
+                                                </li>-->
+                       <li class="">
+                    
+                                   <a href="classificacao">
+             <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                          <span>Classificação</span>
+                      </a>
+                                            </li>
+                       <li class="">
+
+                <a href="contato">
+             <i class="fa fa-phone" aria-hidden="true"></i>
+                          <span>Contato</span>
+                      </a>
+                                            </li>
+                       <li class="">
+
+    <a href="fornecedor">
+            <i class="fa fa-truck" aria-hidden="true"></i>
+                          <span>Fornecedores</span>
+                      </a>
+                                            </li>
+                       <li class="">
+                     
+                         <a href="fornecedor_material">
+            <i class="fa fa-truck" aria-hidden="true"></i>
+                          <span>Fornecedores Material</span>
+                      </a>
+                                            </li>
+                       <li class="">
+
+                              
+                         <a href="grupo_material">
+         <i class="fa fa-dropbox" aria-hidden="true"></i>
+                          <span>Grupo Material</span>
+                      </a>
+                    
+                      
                   </li>
 
-                  <li class="sub-menu">
+              <!--    <li class="sub-menu">
                       <a  href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>UI Elements</span>
@@ -81,7 +162,7 @@
                           <li><a  href="chartjs.html">Chartjs</a></li>
                       </ul>
                   </li>
-
+-->
               </ul>
               <!-- sidebar menu end-->
           </div>

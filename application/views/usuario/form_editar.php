@@ -10,7 +10,7 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Senha <?php echo form_error('senha') ?></label>
-            <input type="text" class="form-control" name="senha" id="senha" placeholder="Senha" value="<?php echo $usuario->senha; ?>" />
+            <input readonly type="password" class="form-control" name="senha" id="senha" placeholder="Senha" value="<?php echo $usuario->senha; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar">Cargo <?php echo form_error('cargo') ?></label>
@@ -46,16 +46,60 @@
         </div>
 	    <div class="form-group">
             <label for="int">Empresa Id <?php echo form_error('empresa_id') ?></label>
-            <input type="text" class="form-control" name="empresa_id" id="empresa_id" placeholder="Empresa Id" value="<?php echo $usuario->empresa_id; ?>" />
+                         <select class="form-control" name="empresa_id" id="empresa_id">
+                         <option selected value="<?php echo $usuario->empresa_id; ?>">
+                             
+                             <?php
+				$query = $this->db->query("SELECT * FROM empresa WHERE id = $usuario->empresa_id");
+				foreach ($query->result() as $user)
+				{ $titulo_empresa = $user->razao_social;
+                echo $titulo_empresa;
+                }
+				?>
+     
+                </option> 
+				<?php
+				$query = $this->db->query("SELECT * FROM empresa");
+				foreach ($query->result() as $user)
+				{ 
+                    if($user->razao_social != $titulo_empresa){ ?>
+                <option value="<?php echo $user->id; ?>"><?php echo $user->razao_social; ?> </option>         
+                    <?php } else{} } ?>
+                </select>
+
+
         </div>
 	    <div class="form-group">
             <label for="int">Perfil Id <?php echo form_error('perfil_id') ?></label>
-            <input type="text" class="form-control" name="perfil_id" id="perfil_id" placeholder="Perfil Id" value="<?php echo $usuario->perfil_id; ?>" />
+           
+
+            
+                     <select class="form-control" name="perfil_id" id="perfil_id">
+                         <option selected value="<?php echo $usuario->perfil_id; ?>">
+                             
+                             <?php
+				$query = $this->db->query("SELECT * FROM perfil WHERE id = $usuario->perfil_id");
+				foreach ($query->result() as $user)
+				{ $titulo_perfil = $user->descricao;
+                echo $titulo_perfil;
+                }
+				?>
+     
+                </option> 
+				<?php
+				$query = $this->db->query("SELECT * FROM perfil");
+				foreach ($query->result() as $user)
+				{ 
+                    if($user->descricao != $titulo_perfil){ ?>
+                <option value="<?php echo $user->id; ?>"><?php echo $user->descricao; ?> </option>         
+                    <?php } else{} } ?>
+                </select>
+
         </div>
 	         <div class="modal-footer">
 	    <input type="hidden" name="id" value="<?php echo $usuario->id; ?>" /> 
 	    <button type="submit" class="btn btn-success">Salvar</button> 
-	    <a href="<?php echo site_url('usuario') ?>" class="btn btn-default">Cancel</a>
+	    <a href="<?php echo site_url('usuario') ?>" class="btn btn-default">Cancelar</a>
         </div>
 	</form>
 

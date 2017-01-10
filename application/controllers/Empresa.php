@@ -61,7 +61,7 @@ class Empresa extends CI_Controller
 	    );
             $this->load->view('empresa/empresa_read', $data);
         } else {
-            $this->session->set_flashdata('message', 'Record Not Found');
+            $this->session->set_flashdata('message', 'Cadastro não foi encontrado');
             redirect(site_url('empresa'));
         }
     }
@@ -105,7 +105,7 @@ class Empresa extends CI_Controller
 	    );
 
             $this->Empresa_model->insert($data);
-            $this->session->set_flashdata('message', 'Create Record Success');
+            $this->session->set_flashdata('message', 'Cadastro deletado com sucesso');
             redirect(site_url('empresa'));
         }
     }
@@ -131,7 +131,7 @@ class Empresa extends CI_Controller
 	    );
             $this->load->view('empresa/empresa_form', $data);
         } else {
-            $this->session->set_flashdata('message', 'Record Not Found');
+            $this->session->set_flashdata('message', 'Cadastro não encontrado');
             redirect(site_url('empresa'));
         }
     }
@@ -156,7 +156,7 @@ class Empresa extends CI_Controller
 	    );
 
             $this->Empresa_model->update($this->input->post('id', TRUE), $data);
-            $this->session->set_flashdata('message', 'Update Record Success');
+            $this->session->set_flashdata('message', 'Cadastro atualizado com sucesso');
             redirect(site_url('empresa'));
         }
     }
@@ -167,10 +167,10 @@ class Empresa extends CI_Controller
 
         if ($row) {
             $this->Empresa_model->delete($id);
-            $this->session->set_flashdata('message', 'Delete Record Success');
+            $this->session->set_flashdata('message', 'Cadastro deletado com sucesso');
             redirect(site_url('empresa'));
         } else {
-            $this->session->set_flashdata('message', 'Record Not Found');
+            $this->session->set_flashdata('message', 'Cadastro não encontrado');
             redirect(site_url('empresa'));
         }
     }

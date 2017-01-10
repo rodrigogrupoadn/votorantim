@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,6 +30,9 @@
   </head>
 
   <body>
+	      <?php if(isset($_SESSION)) {
+        echo $this->session->flashdata('flash_data');
+    } ?>
 
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
@@ -34,12 +41,12 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" action="">
+		    <form action="<?= site_url('login') ?>" class="form-login" method="post">
 		        <h2 class="form-login-heading">Faça seu login agora mesmo</h2>
 		        <div class="login-wrap">
-		            <input type="text" name="login" class="form-control" placeholder="E-mail" autofocus>
+		            <input type="text" name="username" class="form-control" placeholder="E-mail" autofocus>
 		            <br>
-		            <input type="password" name="senha" class="form-control" placeholder="Senha">
+		            <input type="password" name="password" class="form-control" placeholder="Senha">
 		            <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> esqueceu a senha?</a>

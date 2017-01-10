@@ -1,5 +1,6 @@
-<?php include('application/views/template/header.php'); ?>
-      
+
+<?php  include('application/views/template/header.php'); ?>      
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -309,5 +310,4 @@
       </section>
 
       <!--main content end-->
-    
-<?php include('application/views/template/footer.php'); ?>
+<?php  include('application/views/template/footer.php'); ?>  

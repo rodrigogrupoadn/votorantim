@@ -14,6 +14,7 @@ class Usuario extends CI_Controller
 
     public function index()
     {
+
         $q = urldecode($this->input->get('q', TRUE));
         $start = intval($this->input->get('start'));
         
@@ -189,10 +190,10 @@ class Usuario extends CI_Controller
 
         if ($row) {
             $this->Usuario_model->delete($id);
-            $this->session->set_flashdata('message', 'Delete Record Success');
+            $this->session->set_flashdata('message', 'Cadastro deletado com sucesso');
             redirect(site_url('usuario'));
         } else {
-            $this->session->set_flashdata('message', 'Record Not Found');
+            $this->session->set_flashdata('message', 'Cadastro não encontrado');
             redirect(site_url('usuario'));
         }
     }

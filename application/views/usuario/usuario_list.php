@@ -4,7 +4,7 @@
       <section id="main-content">
           <section class="wrapper site-min-height">
               <section class="box_container showback">
-          	<h3><i class="fa fa-users" aria-hidden="true"></i> Usuários cadastrados teste</h3>
+          	<h3><i class="fa fa-users" aria-hidden="true"></i> Usuários cadastrados</h3>
           	<div class="row mt">
           		<div class="col-lg-12">
 
@@ -30,7 +30,7 @@
                                 if ($q <> '')
                                 {
                                     ?>
-                                    <a href="<?php echo site_url('usuario'); ?>" class="btn btn-default">Reset</a>
+                                    <a href="<?php echo site_url('usuario'); ?>" class="btn btn-default">Resetar</a>
                                     <?php
                                 }
                             ?>
@@ -40,19 +40,13 @@
                 </form>
             </div>
         </div>
-   <table class="table table-striped table-advance table-hover">
+       <table class="table table-bordered table-striped table-condensed">
             <tr>
                 <th>No</th>
 		<th>Nome</th>
 		<th>Email</th>
-		<th>Senha</th>
 		<th>Cargo</th>
 		<th>Departamento</th>
-		<th>Ddd1</th>
-		<th>Telefone1</th>
-		<th>Ddd2</th>
-		<th>Telefone2</th>
-	
 		<th>Empresa</th>
 
 		<th>Ações</th>
@@ -64,15 +58,19 @@
 			<td width="80px"><?php echo ++$start ?></td>
 			<td><?php echo $usuario->nome ?></td>
 			<td><?php echo $usuario->email ?></td>
-			<td><?php echo $usuario->senha ?></td>
+			
 			<td><?php echo $usuario->cargo ?></td>
 			<td><?php echo $usuario->departamento ?></td>
-			<td><?php echo $usuario->ddd1 ?></td>
-			<td><?php echo $usuario->telefone1 ?></td>
-			<td><?php echo $usuario->ddd2 ?></td>
-			<td><?php echo $usuario->telefone2 ?></td>
+			
+			
 	
-			<td><?php echo $usuario->empresa_id ?></td>
+			<td>
+				<?php
+				$query = $this->db->query("SELECT * FROM empresa WHERE id = $usuario->empresa_id");
+				foreach ($query->result() as $user)
+				{echo $user->razao_social;}
+				?>
+				</td>
 		
 			<td>
  
@@ -125,8 +123,16 @@
                                 <span class="view_line"><span class="title_line">DDD 2: </span><?php echo $usuario->ddd2 ?></span>
                                 <span class="view_line"><span class="title_line">Telefone 2: </span><?php echo $usuario->telefone2 ?></span>
                                 <span class="view_line"><span class="title_line">Status Chat: </span><?php echo $usuario->chat_ativo ?></span>
-                                <span class="view_line"><span class="title_line">Empresa: </span><?php echo $usuario->empresa_id ?></span>
-                                <span class="view_line"><span class="title_line">Perfil: </span><?php echo $usuario->perfil_id ?></span>
+                                <span class="view_line"><span class="title_line">Empresa: </span>			<?php
+				$query = $this->db->query("SELECT * FROM empresa WHERE id = $usuario->empresa_id");
+				foreach ($query->result() as $user)
+				{echo $user->razao_social;}
+				?></span>
+                                <span class="view_line"><span class="title_line">Perfil: </span>	<?php
+				$query = $this->db->query("SELECT * FROM perfil WHERE id = $usuario->perfil_id");
+				foreach ($query->result() as $user)
+				{echo $user->descricao;}
+				?></span>
                      
 						      </div>
 						      <div class="modal-footer">

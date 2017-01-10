@@ -27,7 +27,7 @@
   </head>
 
   <body>
-<?php echo getcwd(); ?>
+
   <section id="container" >
       <!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
@@ -43,7 +43,7 @@
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
                 <ul class="nav top-menu">
-                    <!-- settings start -->
+                    <!-- settings start 
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-tasks"></i>
@@ -110,9 +110,9 @@
                                 <a href="#">See All Tasks</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                     <!-- settings end -->
-                    <!-- inbox dropdown start-->
+                    <!-- inbox dropdown start
                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-envelope-o"></i>
@@ -175,14 +175,14 @@
                                 <a href="index.html#">See all messages</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                     <!-- inbox dropdown end -->
                 </ul>
                 <!--  notification end -->
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="login">Logout</a></li>
             	</ul>
             </div>
         </header>

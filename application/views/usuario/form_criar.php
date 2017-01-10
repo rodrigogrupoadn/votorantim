@@ -45,12 +45,38 @@
             <input type="text" class="form-control" name="ativo" id="ativo" placeholder="Ativo" />
         </div>
 	    <div class="form-group">
-            <label for="int">Empresa Id <?php echo form_error('empresa_id') ?></label>
-            <input type="text" class="form-control" name="empresa_id" id="empresa_id" placeholder="Empresa Id"  />
+            <label for="int">Empresa <?php echo form_error('empresa_id') ?></label>
+
+
+                <select class="form-control" name="empresa_id" id="empresa_id">
+				<?php
+				$query = $this->db->query("SELECT * FROM empresa");
+				foreach ($query->result() as $user)
+				{ ?>
+                <option value="<?php echo $user->id; ?>"><?php echo $user->razao_social; ?> </option>         
+                <?php } ?>
+                </select>
+
+
+
+
+
+
+          <!-- <input type="text" class="form-control" name="empresa_id" id="empresa_id" placeholder="Empresa Id"  />-->
         </div>
 	    <div class="form-group">
-            <label for="int">Perfil Id <?php echo form_error('perfil_id') ?></label>
-            <input type="text" class="form-control" name="perfil_id" id="perfil_id" placeholder="Perfil Id" />
+            <label for="int">Perfil <?php echo form_error('perfil_id') ?></label>
+
+                     <select class="form-control" name="perfil_id" id="perfil_id">
+				<?php
+				$query = $this->db->query("SELECT * FROM perfil");
+				foreach ($query->result() as $user)
+				{ ?>
+                <option value="<?php echo $user->id; ?>"><?php echo $user->descricao; ?> </option>         
+                <?php } ?>
+                </select>
+
+
         </div>
                 <div class="modal-footer">
 	    <button type="submit" class="btn btn-success">Salvar</button> 
